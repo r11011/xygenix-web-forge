@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         <a href="/" className="flex items-center">
           <span className="text-2xl font-bold text-oxygenix-700">
-            Xygen<span className="text-oxygenix-500">ix</span>
+            Xygen<span className="text-Xygenix-500">ix</span>
           </span>
         </a>
 
@@ -45,10 +45,10 @@ const Navbar = () => {
             <li key={item}>
               <a 
                 href={`#${item.toLowerCase()}`}
-                className="text-gray-700 hover:text-oxygenix-600 font-medium transition-colors relative group py-2"
+                className="text-gray-700 hover:text-Xygenix-600 font-medium transition-colors relative group py-2"
               >
                 {item}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-oxygenix-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-Xygenix-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           ))}
@@ -56,11 +56,11 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:flex items-center space-x-4">
-          <div className="flex items-center text-gray-700 hover:text-oxygenix-600">
+          <div className="flex items-center text-gray-700 hover:text-Xygenix-600">
             <Globe size={18} className="mr-1" />
             <span className="text-sm">Tech Solutions</span>
           </div>
-          <Button className="bg-gradient-to-r from-oxygenix-500 to-oxygenix-700 hover:from-oxygenix-600 hover:to-oxygenix-800 text-white shadow-md">
+          <Button className="bg-gradient-to-r from-oxygenix-500 to-Xygenix-700 hover:from-Xygenix-600 hover:to-Xygenix-800 text-white shadow-md">
             <Wallet size={16} className="mr-2" />
             Consultation
           </Button>
@@ -82,7 +82,7 @@ const Navbar = () => {
                 <li key={item}>
                   <a 
                     href={`#${item.toLowerCase()}`}
-                    className="text-gray-700 hover:text-oxygenix-600 block py-2"
+                    className="text-gray-700 hover:text-Xygenix-600 block py-2"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item}
@@ -90,7 +90,7 @@ const Navbar = () => {
                 </li>
               ))}
               <li>
-                <Button className="w-full bg-gradient-to-r from-oxygenix-500 to-oxygenix-700 hover:from-oxygenix-600 hover:to-oxygenix-800 text-white shadow-md">
+                <Button className="w-full bg-gradient-to-r from-oxygenix-500 to-Xygenix-700 hover:from-oxygenix-600 hover:to-oxygenix-800 text-white shadow-md">
                   <Wallet size={16} className="mr-2" />
                   Consultation
                 </Button>
