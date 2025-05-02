@@ -26,7 +26,7 @@ const Footer = () => {
               <a href="#" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-Xygenix-600 transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="https://www.linkedin.com/company/103853766" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-Xygenix-600 transition-colors">
+              <a href="https://www.linkedin.com/company/xygenix-tech-solutions/?viewAsMember=true" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-Xygenix-600 transition-colors">
                 <Linkedin size={18} />
               </a>
               <a href="#" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-Xygenix-600 transition-colors">
