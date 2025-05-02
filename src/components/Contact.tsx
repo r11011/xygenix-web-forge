@@ -152,8 +152,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-medium mb-1">Phone</h4>
-                    <a href="tel:+91-1234567890" className="text-gray-600 hover:text-Xygenix-600">
-                      +91-1234567890
+                    <a href="tel:+91-9620447336" className="text-gray-600 hover:text-Xygenix-600">
+                      +91-9620447336
                     </a>
                   </div>
                 </div>
@@ -167,7 +167,7 @@ const Contact = () => {
                   <div>
                     <h4 className="text-lg font-medium mb-1">Location</h4>
                     <address className="text-gray-600 not-italic">
-                      WeWork, MG Road<br />
+                      Wework,MG Road<br />
                       Bangalore, Karnataka 560001
                     </address>
                   </div>
