@@ -22,7 +22,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg text-gray-600 max-w-xl">
-              Oxygenix Tech Solutions provides cutting-edge technology services 
+              Xygenix Tech Solutions provides cutting-edge technology services 
               to help businesses innovate, transform, and thrive in the digital era.
             </p>
             
