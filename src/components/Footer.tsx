@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <h3 className="text-2xl font-bold mb-6">
-              Oxygen<span className="text-oxygenix-400">ix</span>
+              Oxygen<span className="text-Xygenix-400">ix</span>
             </h3>
             <p className="text-gray-400 mb-6">
               Innovative technology solutions for businesses of all sizes. We help you transform, 
