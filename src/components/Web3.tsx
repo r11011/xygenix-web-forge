@@ -5,17 +5,17 @@ import { Button } from "@/components/ui/button";
 const Web3 = () => {
   const web3Services = [
     {
-      icon: <Wallet size={32} className="text-oxygenix-600" />,
+      icon: <Wallet size={32} className="text-Xygenix-600" />,
       title: "Blockchain Solutions",
       description: "Custom blockchain development for secure, transparent, and efficient business operations."
     },
     {
-      icon: <Globe size={32} className="text-oxygenix-600" />,
+      icon: <Globe size={32} className="text-Xygenix-600" />,
       title: "Smart Contracts",
       description: "Automated, secure, and transparent smart contracts for your business needs and operations."
     },
     {
-      icon: <Navigation size={32} className="text-oxygenix-600" />,
+      icon: <Navigation size={32} className="text-Xygenix-600" />,
       title: "Decentralized Apps",
       description: "Build robust dApps that leverage blockchain technology for enhanced security and performance."
     }
@@ -38,12 +38,12 @@ const Web3 = () => {
               key={index}
               className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 service-card"
             >
-              <div className="rounded-full bg-oxygenix-100 h-16 w-16 flex items-center justify-center mb-6">
+              <div className="rounded-full bg-Xygenix-100 h-16 w-16 flex items-center justify-center mb-6">
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-6">{service.description}</p>
-              <Button variant="outline" className="border-oxygenix-500 text-oxygenix-600 hover:bg-oxygenix-50">
+              <Button variant="outline" className="border-Xygenix-500 text-Xygenix-600 hover:bg-Xygenix-50">
                 Learn More
               </Button>
             </div>
@@ -51,12 +51,12 @@ const Web3 = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-oxygenix-100 to-oxygenix-200 p-8 rounded-2xl inline-block shadow-lg max-w-3xl">
+          <div className="bg-gradient-to-r from-oxygenix-100 to-Xygenix-200 p-8 rounded-2xl inline-block shadow-lg max-w-3xl">
             <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business with Web3?</h3>
             <p className="text-gray-700 mb-6">
               Our expert team will guide you through implementing Web3 technologies tailored to your specific business needs.
             </p>
-            <Button className="bg-gradient-to-r from-oxygenix-500 to-oxygenix-700 hover:from-oxygenix-600 hover:to-oxygenix-800 text-white">
+            <Button className="bg-gradient-to-r from-Xygenix-500 to-oxygenix-700 hover:from-Xygenix-600 hover:to-Xygenix-800 text-white">
               Schedule a Consultation
             </Button>
           </div>
