@@ -52,7 +52,7 @@ const Team = () => {
               </div>
               <CardHeader className="pt-5 pb-2">
                 <CardTitle className="text-xl">{member.name}</CardTitle>
-                <CardDescription className="text-oxygenix-600 font-medium">
+                <CardDescription className="text-Xygenix-600 font-medium">
                   {member.position}
                 </CardDescription>
               </CardHeader>
