@@ -94,7 +94,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 sm:mb-0">
-              © {new Date().getFullYear()} Oxygenix Tech Solutions Pvt Ltd. All rights reserved.
+              © {new Date().getFullYear()} Xygenix Tech Solutions Pvt Ltd. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm text-gray-400">
               <a href="#" className="hover:text-white">Privacy Policy</a>
