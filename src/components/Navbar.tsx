@@ -35,7 +35,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between">
         <a href="/" className="flex items-center">
           <span className="text-2xl font-bold text-oxygenix-700">
-            Oxygen<span className="text-oxygenix-500">ix</span>
+            Xygen<span className="text-oxygenix-500">ix</span>
           </span>
         </a>
 
