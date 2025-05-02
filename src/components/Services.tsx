@@ -49,9 +49,9 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="service-card border border-gray-200 bg-white hover:shadow-lg hover:border-oxygenix-300">
+            <Card key={index} className="service-card border border-gray-200 bg-white hover:shadow-lg hover:border-Xygenix-300">
               <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-oxygenix-50 text-oxygenix-600 flex items-center justify-center mb-4">
+                <div className="h-12 w-12 rounded-lg bg-Xygenix-50 text-Xygenix-600 flex items-center justify-center mb-4">
                   <service.icon size={24} />
                 </div>
                 <CardTitle>{service.title}</CardTitle>
