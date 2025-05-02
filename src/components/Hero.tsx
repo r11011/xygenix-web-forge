@@ -13,7 +13,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 z-10 py-12 md:py-24">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 space-y-6">
-            <span className="inline-block bg-oxygenix-100 text-Xygenix-700 px-3 py-1 rounded-full text-sm font-medium">
+            <span className="inline-block bg-Xygenix-100 text-Xygenix-700 px-3 py-1 rounded-full text-sm font-medium">
               Innovative Tech Solutions
             </span>
             
