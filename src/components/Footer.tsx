@@ -17,19 +17,19 @@ const Footer = () => {
               innovate, and succeed in the digital era.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-oxygenix-600 transition-colors">
+              <a href="#" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-Xygenix-600 transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-oxygenix-600 transition-colors">
+              <a href="#" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-Xygenix-600 transition-colors">
                 <Twitter size={18} />
               </a>
-              <a href="#" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-oxygenix-600 transition-colors">
+              <a href="#" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-Xygenix-600 transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-oxygenix-600 transition-colors">
+              <a href="#" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-Xygenix-600 transition-colors">
                 <Linkedin size={18} />
               </a>
-              <a href="#" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-oxygenix-600 transition-colors">
+              <a href="#" className="h-9 w-9 rounded-full bg-gray-800 flex items-center justify-center hover:bg-Xygenix-600 transition-colors">
                 <Github size={18} />
               </a>
             </div>
@@ -42,7 +42,7 @@ const Footer = () => {
                 <li key={item}>
                   <a 
                     href={`#${item.toLowerCase()}`}
-                    className="text-gray-400 hover:text-oxygenix-400 transition-colors"
+                    className="text-gray-400 hover:text-Xygenix-400 transition-colors"
                   >
                     {item}
                   </a>
@@ -65,7 +65,7 @@ const Footer = () => {
                 <li key={service}>
                   <a 
                     href="#services"
-                    className="text-gray-400 hover:text-oxygenix-400 transition-colors"
+                    className="text-gray-400 hover:text-Xygenix-400 transition-colors"
                   >
                     {service}
                   </a>
@@ -84,7 +84,7 @@ const Footer = () => {
                 placeholder="Your Email" 
                 className="bg-gray-800 border-gray-700 text-white placeholder:text-gray-500"
               />
-              <Button size="icon" className="bg-oxygenix-600 hover:bg-oxygenix-700">
+              <Button size="icon" className="bg-Xygenix-600 hover:bg-Xygenix-700">
                 <Send size={16} />
               </Button>
             </div>
