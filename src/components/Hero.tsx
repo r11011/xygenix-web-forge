@@ -6,19 +6,19 @@ const Hero = () => {
   return (
     <section id="home" className="relative hero-gradient min-h-screen flex items-center pt-20">
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute -right-1/4 -top-96 h-[800px] w-[800px] rounded-full bg-gradient-to-r from-oxygenix-200/40 to-oxygenix-300/40 blur-3xl"></div>
-        <div className="absolute -bottom-12 -left-12 h-[300px] w-[300px] rounded-full bg-gradient-to-r from-oxygenix-200/30 to-oxygenix-400/30 blur-2xl"></div>
+        <div className="absolute -right-1/4 -top-96 h-[800px] w-[800px] rounded-full bg-gradient-to-r from-Xygenix-200/40 to-Xygenix-300/40 blur-3xl"></div>
+        <div className="absolute -bottom-12 -left-12 h-[300px] w-[300px] rounded-full bg-gradient-to-r from-Xygenix-200/30 to-Xygenix-400/30 blur-2xl"></div>
       </div>
       
       <div className="container mx-auto px-4 z-10 py-12 md:py-24">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 space-y-6">
-            <span className="inline-block bg-oxygenix-100 text-oxygenix-700 px-3 py-1 rounded-full text-sm font-medium">
+            <span className="inline-block bg-oxygenix-100 text-Xygenix-700 px-3 py-1 rounded-full text-sm font-medium">
               Innovative Tech Solutions
             </span>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Transforming Ideas into <span className="text-oxygenix-600">Digital Reality</span>
+              Transforming Ideas into <span className="text-Xygenix-600">Digital Reality</span>
             </h1>
             
             <p className="text-lg text-gray-600 max-w-xl">
@@ -27,12 +27,12 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 pt-2">
-              <Button size="lg" className="bg-oxygenix-600 hover:bg-oxygenix-700 text-white">
+              <Button size="lg" className="bg-Xygenix-600 hover:bg-Xygenix-700 text-white">
                 Our Services
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               
-              <Button size="lg" variant="outline" className="border-oxygenix-600 text-oxygenix-600 hover:bg-oxygenix-50">
+              <Button size="lg" variant="outline" className="border-Xygenix-600 text-Xygenix-600 hover:bg-Xygenix-50">
                 Get in Touch
               </Button>
             </div>
@@ -44,7 +44,7 @@ const Hero = () => {
                 ))}
               </div>
               <div>
-                <p className="text-oxygenix-700 font-semibold">Trusted by 300+</p>
+                <p className="text-Xygenix-700 font-semibold">Trusted by 300+</p>
                 <p className="text-sm text-gray-500">Satisfied clients worldwide</p>
               </div>
             </div>
@@ -52,7 +52,7 @@ const Hero = () => {
           
           <div className="md:w-1/2">
             <div className="relative">
-              <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-oxygenix-400 to-oxygenix-600 opacity-75 blur"></div>
+              <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-Xygenix-400 to-Xygenix-600 opacity-75 blur"></div>
               <div className="relative aspect-video rounded-lg bg-white shadow-xl overflow-hidden">
                 <div className="h-full w-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
                   <img 
