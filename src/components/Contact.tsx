@@ -6,6 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Send, Clock, Globe, Wallet } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+const API_URL = "http://localhost:5000"; // Change this to your actual API URL in production
+
 const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
@@ -14,22 +16,76 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
-    // Here you would typically send an email to agrowdynamics@gmail.com
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch(`${API_URL}/api/contacts`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          source: 'contact_form',
+          timestamp: new Date(),
+        }),
+      });
+      
+      if (response.ok) {
+        console.log("Form submitted and saved to MongoDB");
+        toast({
+          title: "Message sent!",
+          description: "We'll get back to you as soon as possible.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        throw new Error('Failed to submit form');
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error",
+        description: "There was an error sending your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
+  // Track page visit when component mounts
+  useState(() => {
+    const trackVisit = async () => {
+      try {
+        await fetch(`${API_URL}/api/visitors`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            page: 'contact',
+            timestamp: new Date(),
+            referrer: document.referrer,
+            userAgent: navigator.userAgent,
+          }),
+        });
+        console.log("Visit tracked in MongoDB");
+      } catch (error) {
+        console.error("Error tracking visit:", error);
+      }
+    };
+    
+    trackVisit();
+  });
 
   return (
     <section id="contact" className="py-20 bg-gradient-to-b from-white to-oxygenix-50">
@@ -113,8 +169,10 @@ const Contact = () => {
               <Button 
                 type="submit" 
                 className="w-full bg-gradient-to-r from-Xygenix-500 to-Xygenix-700 hover:from-Xygenix-600 hover:to-Xygenix-800"
+                disabled={isSubmitting}
               >
-                <Send size={16} className="mr-2" /> Send Message
+                <Send size={16} className="mr-2" /> 
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
           </div>
