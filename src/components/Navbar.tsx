@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, Globe, Wallet, PartyPopper } from "lucide-react";
@@ -71,6 +72,11 @@ const Navbar = () => {
           e.preventDefault();
           scrollToSection("home");
         }}>
+          <img 
+            src="/lovable-uploads/051f402a-2cb1-4415-b534-37f892494ba9.png" 
+            alt="Xygenix Logo" 
+            className="h-10 mr-2"
+          />
           <span className="text-2xl font-bold text-oxygenix-700">
             Xygen<span className="text-Xygenix-500">ix</span>
           </span>
