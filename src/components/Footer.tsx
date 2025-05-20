@@ -9,9 +9,13 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-2xl font-bold mb-6">
-              Oxygen<span className="text-Xygenix-400">ix</span>
-            </h3>
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/69f37c35-9450-48fc-a6e6-0efddf7839fb.png" 
+                alt="Xygenix Logo" 
+                className="h-16 bg-white/90 p-2 rounded-lg"
+              />
+            </div>
             <p className="text-gray-400 mb-6">
               Innovative technology solutions for businesses of all sizes. We help you transform, 
               innovate, and succeed in the digital era.
