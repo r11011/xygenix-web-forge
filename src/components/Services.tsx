@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Code, Layout, Database, Globe, Search, LineChart } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -36,6 +37,10 @@ const services = [
 ];
 
 const Services = () => {
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'});
+  };
+
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -57,12 +62,29 @@ const Services = () => {
                 <CardTitle>{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600">
+                <CardDescription className="text-gray-600 mb-4">
                   {service.description}
                 </CardDescription>
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  className="border-Xygenix-500 text-Xygenix-600 hover:bg-Xygenix-50 mt-2"
+                  onClick={scrollToContact}
+                >
+                  Request Service
+                </Button>
               </CardContent>
             </Card>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <Button 
+            className="bg-gradient-to-r from-Xygenix-500 to-Xygenix-700 hover:from-Xygenix-600 hover:to-Xygenix-800 text-white"
+            onClick={scrollToContact}
+          >
+            Discuss Your Project
+          </Button>
         </div>
       </div>
     </section>

@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({behavior: 'smooth'});
+  };
+
   return (
     <section id="home" className="relative hero-gradient min-h-screen flex items-center pt-20">
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -27,12 +31,21 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 pt-2">
-              <Button size="lg" className="bg-Xygenix-600 hover:bg-Xygenix-700 text-white">
+              <Button 
+                size="lg" 
+                className="bg-Xygenix-600 hover:bg-Xygenix-700 text-white"
+                onClick={() => scrollToSection('services')}
+              >
                 Our Services
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               
-              <Button size="lg" variant="outline" className="border-Xygenix-600 text-Xygenix-600 hover:bg-Xygenix-50">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-Xygenix-600 text-Xygenix-600 hover:bg-Xygenix-50"
+                onClick={() => scrollToSection('contact')}
+              >
                 Get in Touch
               </Button>
             </div>

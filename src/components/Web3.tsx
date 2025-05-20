@@ -21,6 +21,10 @@ const Web3 = () => {
     }
   ];
 
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'});
+  };
+
   return (
     <section id="web3" className="py-24 bg-gradient-to-b from-oxygenix-50 to-white">
       <div className="container mx-auto px-4">
@@ -43,7 +47,11 @@ const Web3 = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">{service.title}</h3>
               <p className="text-gray-600 mb-6">{service.description}</p>
-              <Button variant="outline" className="border-Xygenix-500 text-Xygenix-600 hover:bg-Xygenix-50">
+              <Button 
+                variant="outline" 
+                className="border-Xygenix-500 text-Xygenix-600 hover:bg-Xygenix-50"
+                onClick={scrollToContact}
+              >
                 Learn More
               </Button>
             </div>
@@ -56,7 +64,10 @@ const Web3 = () => {
             <p className="text-gray-700 mb-6">
               Our expert team will guide you through implementing Web3 technologies tailored to your specific business needs.
             </p>
-            <Button className="bg-gradient-to-r from-Xygenix-500 to-oxygenix-700 hover:from-Xygenix-600 hover:to-Xygenix-800 text-white">
+            <Button 
+              className="bg-gradient-to-r from-Xygenix-500 to-oxygenix-700 hover:from-Xygenix-600 hover:to-Xygenix-800 text-white"
+              onClick={scrollToContact}
+            >
               Schedule a Consultation
             </Button>
           </div>

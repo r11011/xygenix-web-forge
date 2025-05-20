@@ -1,12 +1,13 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, Globe, Wallet } from "lucide-react";
+import { Menu, Globe, Wallet, Celebration } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +16,21 @@ const Navbar = () => {
       } else {
         setIsScrolled(false);
       }
+
+      // Update active section based on scroll position
+      const sections = ["home", "web3", "services", "celebration", "about", "team", "contact"];
+      const current = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+
+      if (current) {
+        setActiveSection(current);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -22,6 +38,25 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(sectionId);
+      setMobileMenuOpen(false);
+    }
+  };
+
+  const navItems = [
+    { id: "home", label: "Home" },
+    { id: "web3", label: "Web3" },
+    { id: "services", label: "Services" },
+    { id: "celebration", label: "Anniversary" },
+    { id: "about", label: "About" },
+    { id: "team", label: "Team" },
+    { id: "contact", label: "Contact" },
+  ];
 
   return (
     <nav
@@ -33,22 +68,41 @@ const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <a href="/" className="flex items-center">
+        <a href="#home" className="flex items-center" onClick={(e) => {
+          e.preventDefault();
+          scrollToSection("home");
+        }}>
           <span className="text-2xl font-bold text-oxygenix-700">
             Xygen<span className="text-Xygenix-500">ix</span>
           </span>
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8">
-          {["Home", "Web3", "Services", "Team", "Contact"].map((item) => (
-            <li key={item}>
+        <ul className="hidden md:flex space-x-6">
+          {navItems.map((item) => (
+            <li key={item.id}>
               <a 
-                href={`#${item.toLowerCase()}`}
-                className="text-gray-700 hover:text-Xygenix-600 font-medium transition-colors relative group py-2"
+                href={`#${item.id}`}
+                className={cn(
+                  "text-gray-700 hover:text-Xygenix-600 font-medium transition-colors relative group py-2",
+                  activeSection === item.id && "text-Xygenix-600"
+                )}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.id);
+                }}
               >
-                {item}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-Xygenix-500 transition-all duration-300 group-hover:w-full"></span>
+                {item.id === "celebration" && (
+                  <span className="absolute -top-1 -right-1 flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-Xygenix-500 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-Xygenix-600"></span>
+                  </span>
+                )}
+                {item.label}
+                <span className={cn(
+                  "absolute bottom-0 left-0 h-0.5 bg-Xygenix-500 transition-all duration-300",
+                  activeSection === item.id ? "w-full" : "w-0 group-hover:w-full"
+                )}></span>
               </a>
             </li>
           ))}
@@ -60,7 +114,10 @@ const Navbar = () => {
             <Globe size={18} className="mr-1" />
             <span className="text-sm">Tech Solutions</span>
           </div>
-          <Button className="bg-gradient-to-r from-oxygenix-500 to-Xygenix-700 hover:from-Xygenix-600 hover:to-Xygenix-800 text-white shadow-md">
+          <Button 
+            className="bg-gradient-to-r from-oxygenix-500 to-Xygenix-700 hover:from-Xygenix-600 hover:to-Xygenix-800 text-white shadow-md"
+            onClick={() => scrollToSection("contact")}
+          >
             <Wallet size={16} className="mr-2" />
             Consultation
           </Button>
@@ -78,19 +135,31 @@ const Navbar = () => {
         {mobileMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-white shadow-lg p-5 md:hidden animate-fade-in">
             <ul className="flex flex-col space-y-4">
-              {["Home", "Web3", "Services", "Team", "Contact"].map((item) => (
-                <li key={item}>
+              {navItems.map((item) => (
+                <li key={item.id}>
                   <a 
-                    href={`#${item.toLowerCase()}`}
-                    className="text-gray-700 hover:text-Xygenix-600 block py-2"
-                    onClick={() => setMobileMenuOpen(false)}
+                    href={`#${item.id}`}
+                    className={cn(
+                      "text-gray-700 hover:text-Xygenix-600 block py-2 flex items-center",
+                      activeSection === item.id && "text-Xygenix-600"
+                    )}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection(item.id);
+                    }}
                   >
-                    {item}
+                    {item.id === "celebration" && (
+                      <Celebration size={16} className="mr-2 text-Xygenix-600" />
+                    )}
+                    {item.label}
                   </a>
                 </li>
               ))}
               <li>
-                <Button className="w-full bg-gradient-to-r from-oxygenix-500 to-Xygenix-700 hover:from-oxygenix-600 hover:to-oxygenix-800 text-white shadow-md">
+                <Button 
+                  className="w-full bg-gradient-to-r from-oxygenix-500 to-Xygenix-700 hover:from-oxygenix-600 hover:to-oxygenix-800 text-white shadow-md"
+                  onClick={() => scrollToSection("contact")}
+                >
                   <Wallet size={16} className="mr-2" />
                   Consultation
                 </Button>

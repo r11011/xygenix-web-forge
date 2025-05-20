@@ -12,6 +12,10 @@ const features = [
 ];
 
 const About = () => {
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({behavior: 'smooth'});
+  };
+
   return (
     <section id="about" className="py-20">
       <div className="container mx-auto px-4">
@@ -81,8 +85,12 @@ const About = () => {
               ))}
             </div>
 
-            <Button size="lg" className="bg-Xygenix-600 hover:bg-Xygenix-700 mt-4">
-              Learn More About Us
+            <Button 
+              size="lg" 
+              className="bg-Xygenix-600 hover:bg-Xygenix-700 mt-4"
+              onClick={() => scrollToSection('team')}
+            >
+              Meet Our Team
             </Button>
           </div>
         </div>
