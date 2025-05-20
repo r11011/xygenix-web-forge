@@ -1,5 +1,5 @@
 
-import { Celebration, Milestone as MilestoneIcon } from "lucide-react";
+import { PartyPopper as Celebration, Milestone as MilestoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Milestone = () => {

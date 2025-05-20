@@ -112,7 +112,7 @@ const Celebration = () => {
         </div>
       </div>
       
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{__html: `
         @keyframes fall {
           0% { transform: translateY(-10px); }
           100% { transform: translateY(100vh); }
@@ -122,7 +122,7 @@ const Celebration = () => {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }
-      `}</style>
+      `}} />
     </section>
   );
 };
