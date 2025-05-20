@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, Globe, Wallet, Celebration } from "lucide-react";
+import { Menu, Globe, Wallet, PartyPopper } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
@@ -149,7 +148,7 @@ const Navbar = () => {
                     }}
                   >
                     {item.id === "celebration" && (
-                      <Celebration size={16} className="mr-2 text-Xygenix-600" />
+                      <PartyPopper size={16} className="mr-2 text-Xygenix-600" />
                     )}
                     {item.label}
                   </a>

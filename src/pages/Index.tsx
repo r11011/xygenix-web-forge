@@ -8,6 +8,7 @@ import Milestone from "@/components/Milestone";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Celebration from "@/components/Celebration";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <Hero />
       <Web3 />
       <Services />
+      <Celebration />
       <Milestone />
       <About />
       <Team />
