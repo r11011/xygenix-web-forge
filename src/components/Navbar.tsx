@@ -63,11 +63,11 @@ const Navbar = () => {
       className={cn(
         "fixed w-full z-50 transition-all duration-300",
         isScrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-lg py-3" 
-          : "bg-transparent py-4"
+          ? "bg-white/95 backdrop-blur-md shadow-md py-1" 
+          : "bg-transparent py-2"
       )}
     >
-      <div className="container flex items-center justify-between">
+      <div className="container flex items-center justify-between px-4">
         <a href="#home" className="flex items-center" onClick={(e) => {
           e.preventDefault();
           scrollToSection("home");
@@ -75,18 +75,18 @@ const Navbar = () => {
           <img 
             src="/lovable-uploads/69f37c35-9450-48fc-a6e6-0efddf7839fb.png" 
             alt="Xygenix Logo" 
-            className="h-12 md:h-14"
+            className="h-8 md:h-10"
           />
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6">
+        <ul className="hidden md:flex space-x-4">
           {navItems.map((item) => (
             <li key={item.id}>
               <a 
                 href={`#${item.id}`}
                 className={cn(
-                  "text-gray-700 hover:text-blue-600 font-medium transition-colors relative group py-2",
+                  "text-gray-700 hover:text-blue-600 font-medium transition-colors relative group py-1 px-2 text-sm",
                   activeSection === item.id && "text-blue-600",
                   !isScrolled && "text-white hover:text-blue-300",
                   !isScrolled && activeSection === item.id && "text-blue-300"
@@ -97,9 +97,9 @@ const Navbar = () => {
                 }}
               >
                 {item.id === "celebration" && (
-                  <span className="absolute -top-1 -right-1 flex h-2 w-2">
+                  <span className="absolute -top-0.5 -right-0.5 flex h-1.5 w-1.5">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-600"></span>
                   </span>
                 )}
                 {item.label}
@@ -113,20 +113,14 @@ const Navbar = () => {
         </ul>
 
         {/* CTA Button */}
-        <div className="hidden md:flex items-center space-x-4">
-          <div className={cn(
-            "flex items-center transition-colors",
-            isScrolled ? "text-gray-700 hover:text-blue-600" : "text-white/80 hover:text-blue-300"
-          )}>
-            <Globe size={18} className="mr-1" />
-            <span className="text-sm">Tech Solutions</span>
-          </div>
+        <div className="hidden md:flex items-center space-x-3">
           <Button 
-            className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white shadow-lg px-6 py-2"
+            size="sm"
+            className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white shadow-lg px-4 py-1 text-sm"
             onClick={() => scrollToSection("contact")}
           >
-            <Wallet size={16} className="mr-2" />
-            Consultation
+            <Wallet size={14} className="mr-1" />
+            Contact
           </Button>
         </div>
 
@@ -138,19 +132,19 @@ const Navbar = () => {
           )}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
-          <Menu size={24} />
+          <Menu size={20} />
         </button>
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg p-5 md:hidden animate-fade-in border-t border-gray-200">
-            <ul className="flex flex-col space-y-4">
+          <div className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg p-4 md:hidden animate-fade-in border-t border-gray-200">
+            <ul className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 <li key={item.id}>
                   <a 
                     href={`#${item.id}`}
                     className={cn(
-                      "text-gray-700 hover:text-blue-600 block py-2 flex items-center transition-colors",
+                      "text-gray-700 hover:text-blue-600 block py-1 flex items-center transition-colors text-sm",
                       activeSection === item.id && "text-blue-600"
                     )}
                     onClick={(e) => {
@@ -159,7 +153,7 @@ const Navbar = () => {
                     }}
                   >
                     {item.id === "celebration" && (
-                      <PartyPopper size={16} className="mr-2 text-blue-600" />
+                      <PartyPopper size={14} className="mr-2 text-blue-600" />
                     )}
                     {item.label}
                   </a>
@@ -167,11 +161,12 @@ const Navbar = () => {
               ))}
               <li className="pt-2 border-t border-gray-200">
                 <Button 
-                  className="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white shadow-lg"
+                  size="sm"
+                  className="w-full bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white shadow-lg text-sm"
                   onClick={() => scrollToSection("contact")}
                 >
-                  <Wallet size={16} className="mr-2" />
-                  Consultation
+                  <Wallet size={14} className="mr-1" />
+                  Contact
                 </Button>
               </li>
             </ul>
