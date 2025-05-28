@@ -22,33 +22,33 @@ const About = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
             <div className="relative">
-              <div className="absolute -z-10 -inset-1 rounded-lg bg-gradient-to-r from-oxygenix-400 to-Xygenix-600 opacity-30 blur-xl"></div>
+              <div className="absolute -z-10 -inset-1 rounded-lg bg-gradient-to-r from-blue-400 to-blue-600 opacity-30 blur-xl"></div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="aspect-square rounded-lg overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
-                    alt="Team Collaboration"
+                    src="https://images.unsplash.com/photo-1473968512647-3e447244af8f"
+                    alt="Drone Technology"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden mt-8">
                   <img
-                    src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789"
-                    alt="Modern Office"
+                    src="https://images.unsplash.com/photo-1518709268805-4e9042af2176"
+                    alt="AI Technology"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4"
-                    alt="Tech Meeting"
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                    alt="Government Solutions"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="aspect-square rounded-lg overflow-hidden mt-8">
                   <img
-                    src="https://images.unsplash.com/photo-1559028012-481c04fa702d"
-                    alt="Code Development"
+                    src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43"
+                    alt="Agriculture Technology"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -57,7 +57,7 @@ const About = () => {
           </div>
 
           <div className="lg:w-1/2 space-y-6">
-            <span className="text-Xygenix-600 font-medium">About Us</span>
+            <span className="text-blue-600 font-medium">About Us</span>
             <h2 className="text-3xl md:text-4xl font-bold">
               We Build Digital Solutions That Help Businesses Thrive
             </h2>
@@ -77,7 +77,7 @@ const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-2">
-                  <div className="rounded-full bg-Xygenix-100 text-Xygenix-600 p-1">
+                  <div className="rounded-full bg-blue-100 text-blue-600 p-1">
                     <Check size={16} />
                   </div>
                   <span className="text-gray-700">{feature}</span>
@@ -87,7 +87,7 @@ const About = () => {
 
             <Button 
               size="lg" 
-              className="bg-Xygenix-600 hover:bg-Xygenix-700 mt-4"
+              className="bg-blue-600 hover:bg-blue-700 mt-4"
               onClick={() => scrollToSection('team')}
             >
               Meet Our Team

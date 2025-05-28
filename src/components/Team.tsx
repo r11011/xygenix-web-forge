@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 const teamMembers = [
@@ -9,15 +8,15 @@ const teamMembers = [
     image: "/lovable-uploads/76a22083-4712-4931-bdef-48eae7c26171.png",
   },
   {
-    name: "Team Member",
-    position: "Position",
-    bio: "More details coming soon.",
+    name: "Raju",
+    position: "Co-Founder",
+    bio: "Co-founder with expertise in business development and strategic partnerships for government and technology solutions.",
     image: "/placeholder.svg",
   },
   {
-    name: "Team Member",
-    position: "Position",
-    bio: "More details coming soon.",
+    name: "Sunitha",
+    position: "Tech Lead",
+    bio: "Technical leader specializing in AI, robotics, and drone technology solutions for agriculture and safety applications.",
     image: "/placeholder.svg",
   },
   {
