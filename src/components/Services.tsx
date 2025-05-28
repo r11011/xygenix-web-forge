@@ -1,13 +1,12 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Code, Layout, Database, Globe, Search, LineChart, Drone, Shield, Users, Cpu, Bot, Heart } from "lucide-react";
+import { Code, Layout, Database, Globe, Search, LineChart, Plane, Shield, Users, Cpu, Bot, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
     title: "AI Robots & Drone Crop Survey",
     description: "Advanced AI-powered drone technology for precision agriculture and crop monitoring for Government of India projects.",
-    icon: Drone,
+    icon: Plane,
     isActive: true,
   },
   {
