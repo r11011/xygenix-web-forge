@@ -12,19 +12,19 @@ const teamMembers = [
     name: "Team Member",
     position: "Position",
     bio: "More details coming soon.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=80",
+    image: "/placeholder.svg",
   },
   {
     name: "Team Member",
     position: "Position",
     bio: "More details coming soon.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=80",
+    image: "/placeholder.svg",
   },
   {
     name: "Team Member",
     position: "Position", 
     bio: "More details coming soon.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=80",
+    image: "/placeholder.svg",
   },
 ];
 
@@ -43,12 +43,18 @@ const Team = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {teamMembers.map((member, index) => (
             <Card key={index} className="overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow">
-              <div className="aspect-[4/5] overflow-hidden">
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                />
+              <div className="aspect-[4/5] overflow-hidden bg-gray-100 flex items-center justify-center">
+                {member.image === "/placeholder.svg" ? (
+                  <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                    <span className="text-blue-400 text-2xl font-bold">?</span>
+                  </div>
+                ) : (
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                )}
               </div>
               <CardHeader className="pt-5 pb-2">
                 <CardTitle className="text-xl">{member.name}</CardTitle>
